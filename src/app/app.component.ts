@@ -22,23 +22,16 @@ export class AppComponent {
       }, 200);
     })   
 }
+SetUserData(user: any) {
+
+  const userData: User = {
+    uid: user.uid,
+    email: user.email,
+    displayName: user.displayName,
+    photoURL: user.photoURL,
+    emailVerified: user.emailVerified
+  }
+  return userData;
+}
   
-  SetUserData(user: any) {
-    const userData: User = {
-      uid: user.uid,
-      email: user.email,
-      displayName: user.displayName,
-      photoURL: user.photoURL,
-      emailVerified: user.emailVerified
-    }
-    return userData;
-  }
-
-  login() {
-    this.auth.signInWithEmailAndPassword('test@gmail.com','123456');
-  }
-
-  logout() {
-    this.auth.signOut();
-  }
 }

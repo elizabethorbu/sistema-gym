@@ -46,9 +46,9 @@ export class LoginComponent implements OnInit {
  login() {
 if(this.formularioLogin.valid){
   this.datosCorrectos=true;
-this.auth.signInWithEmailAndPassword(this.formularioLogin.value.email,this.formularioLogin.value.password).then((usuario) => {
-console.log(usuario)
-this.spinner.show();
+  this.auth.signInWithEmailAndPassword(this.formularioLogin.value.email,this.formularioLogin.value.password).then((usuario) => {
+  console.log(usuario)
+  this.spinner.show();
 }).catch((error)=>{
   this.datosCorrectos=false;
   this.textoError=error.message;
