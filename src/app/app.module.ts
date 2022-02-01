@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AccordionModule } from 'ngx-bootstrap/accordion';
 import { LoginComponent } from './login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { EncabezadoComponent } from './encabezado/encabezado.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -29,6 +29,7 @@ import { ListadoClientesComponent } from './listado-clientes/listado-clientes.co
     AccordionModule.forRoot(),
     ReactiveFormsModule,
     NgxSpinnerModule,
+    FormsModule,
     BsDropdownModule.forRoot()
   ],
   providers: [AccordionModule],
