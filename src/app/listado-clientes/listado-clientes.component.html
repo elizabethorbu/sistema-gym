@@ -12,45 +12,17 @@
 
     <div class="row">
         
-        <div class="col-sm-3">
+        <div class="col-sm-3" *ngFor= "let cliente of clientes">
             <div class="card" style="width: 16rem;">
-                <img src="data:image/jpeg;base64,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" class="card-img-top imgCliente" alt="...">
+                <img [src]="cliente.img" class="card-img-top imgCliente" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">{{cliente.nombre}} {{cliente.apellido}}</h5>
                   <a href="#" class="card-link" style="text-decoration:none" >Editar</a>
                   <a href="#" class="card-link text-danger" style="text-decoration:none" >Desactivar</a>
                 </div>
               </div>
         </div>
 
-        <div class="col-sm-3">
-            <div class="card" style="width: 16rem;">
-                <img src="https://ih1.redbubble.net/image.618880271.0955/flat,750x1000,075,f.jpg" class="card-img-top imgCliente" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <a href="#" class="card-link" style="text-decoration:none" >Editar</a>
-                  <a href="#" class="card-link text-danger" style="text-decoration:none" >Desactivar</a>
-                </div>
-              </div>        </div>
-        <div class="col-sm-3">
-            <div class="card" style="width: 16rem;">
-                <img src="https://i.pinimg.com/736x/c2/25/3e/c2253edf4d0de954a4703f6f074a2b10.jpg" class="card-img-top imgCliente" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <a href="#" class="card-link" style="text-decoration:none" >Editar</a>
-                  <a href="#" class="card-link text-danger" style="text-decoration:none" >Desactivar</a>
-                </div>
-              </div>        </div>
-
-              <div class="col-sm-3">
-                <div class="card" style="width: 16rem;">
-                    <img src="https://imgflip.com/s/meme/Smiling-Cat.jpg" class="card-img-top imgCliente" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <a href="#" class="card-link" style="text-decoration:none" >Editar</a>
-                      <a href="#" class="card-link text-danger" style="text-decoration:none" >Desactivar</a>
-                    </div>
-                  </div>        
-            </div>
+        
     </div>
 </div>
